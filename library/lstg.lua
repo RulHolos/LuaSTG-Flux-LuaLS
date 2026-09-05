@@ -4,6 +4,7 @@
 ---@field Platform lstg.Platform Misc Windows utilities.
 ---@field FileManager lstg.FileManager File and archive management.
 ---@field Color lstg.Color Color tools.
+---@field RichText lstg.RichText Rich Text renderer.
 lstg = {}
 
 ---Available external command line arguments (likely from an editor)
