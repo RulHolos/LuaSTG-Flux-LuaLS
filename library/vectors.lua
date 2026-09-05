@@ -7,7 +7,7 @@
 ---@operator sub(lstg.Vector) : lstg.Vector Substracts two vectors and returns the result.
 ---@operator mul(lstg.Vector) : lstg.Vector Multiplies two vectors together and returns the result.
 ---@operator div(lstg.Vector) : lstg.Vector Divides two vectors together and returns the result.
----@operator unm() : lstg.Vector Returns the negation of the vector.
+---@operator unm : lstg.Vector Returns the negation of the vector.
 lstg.Vector = {}
 
 ---Returns the length of the vector.

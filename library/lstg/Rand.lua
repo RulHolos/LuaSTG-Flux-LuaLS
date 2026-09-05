@@ -4,7 +4,7 @@
 ---@class lstg.Rand
 lstg.Rand = {}
 
----Creates a WELL512 random number generator.
+---Creates a WELL512 random number generator. (Legacy constructor)
 ---@return lstg.Rand
 ---@nodiscard
 function lstg.Rand()

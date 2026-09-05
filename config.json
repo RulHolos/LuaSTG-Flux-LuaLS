@@ -1,6 +1,28 @@
 {
     "$schema": "https://raw.githubusercontent.com/LuaLS/LLS-Addons/main/schemas/addon_config.schema.json",
 
-    "name": "LuaSTG",
-    "files": ["core.lua", "%s.cdf", "main.lua", "config.json", "launch", "launch.lua"]
+    "name": "LuaSTG-Flux Definitions",
+    "files": ["core.lua", "%s.cdf", "main.lua", "config.json", "launch", "launch.lua"],
+    "settings": {
+        "Lua.diagnostics.disable": [
+            "lowercase-global",
+            "inject-field",
+            "deprecated",
+            "need-check-nil"
+        ],
+        "[lua]": {
+            "editor.defaultFormatter": "sumneko.lua"
+        },
+        "Lua.completion.autoRequire": false,
+        "Lua.runtime.version": "LuaJIT",
+        "Lua.codeLens.enable": true,
+        "Lua.diagnostics.ignoredFiles": "Enable",
+        "Lua.diagnostics.libraryFiles": "Enable",
+        "Lua.workspace.ignoreDir": [
+            ".vscode",
+            ".git"
+        ],
+        "Lua.workspace.maxPreload": 10000,
+        "Lua.workspace.preloadFileSize": 1000
+    }
 }
