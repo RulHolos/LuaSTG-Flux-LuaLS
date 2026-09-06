@@ -11,12 +11,14 @@ lstg.Input = {}
 ---@return boolean
 function lstg.GetKeyState(key)
 end
+lstg.Input.GetKeyState = lstg.GetKeyState
 
 ---Returns whether a mouse button is currently pressed.
 ---@param button lstg.Input.Mouse One of the mouse constants from `lstg.Input.Mouse`.
 ---@return boolean
 function lstg.GetMouseState(button)
 end
+lstg.Input.GetMouseState = lstg.GetMouseState
 
 ---Returns the mouse cursor position.
 ---@param relative boolean? If true, return the position relative to the window client area.
@@ -24,16 +26,19 @@ end
 ---@return number y
 function lstg.GetMousePosition(relative)
 end
+lstg.Input.GetMousePosition = lstg.GetMousePosition
 
 ---Returns the cumulative mouse wheel delta.
 ---@return integer
 function lstg.GetMouseWheelDelta()
 end
+lstg.Input.GetMouseWheelDelta = lstg.GetMouseWheelDelta
 
 ---Deprecated legacy input helper. Returns the last pressed key code.
 ---@return integer
 function lstg.GetLastKey()
 end
+lstg.Input.GetLastKey = lstg.GetLastKey
 
 ---@class lstg.Input.Keyboard
 ---@field None integer
