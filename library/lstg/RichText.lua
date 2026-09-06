@@ -2,6 +2,8 @@
 
 ---Represents a RichText instance.
 ---
+---You don't need to load this module manually. It is automatically available.
+---
 ---This text rendering supports the following tags:
 ---- [b]bold[/b]
 ---- [i]italic[/i]
