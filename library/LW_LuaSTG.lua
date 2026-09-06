@@ -1,5 +1,6 @@
 ---@meta
 
+---Main luastg module. This is where the extreme majority of the API is defined into.
 ---@class lstg
 ---@field Platform lstg.Platform Misc Windows utilities.
 ---@field FileManager lstg.FileManager File and archive management.
@@ -12,6 +13,178 @@ lstg = {}
 ---2. --log-window-wait: Do not close the engine log window immediately after closing the engine.
 ---@type string[]
 lstg.args = {}
+
+---Sets the entry script for the engine.
+---@param script_path string Path to the entry script.
+function lstg.SetEntryScript(script_path)
+end
+
+---Gets the version number of the engine.
+---@return number Major
+---@return number Minor
+---@return number Patch
+function lstg.GetVersionNumber()
+end
+
+---Returns `LuaSTG <Branch> v<version>`. Example: `LuaSTG Flux v0.4.6`
+---@return string @The version name of the engine.
+function lstg.GetVersionName()
+end
+
+---Returns the name of the engine's branch.
+---@return string @The name of the engine's branch.
+function lstg.GetVersionBranch()
+end
+
+---Sets the game's window to windowed.
+---@param enable boolean Whether to enable or disable windowed mode.
+function lstg.SetWindowed(enable)
+end
+
+---Sets the game's window to borderless.
+---@param enable boolean Whether to enable or disable borderless mode.
+function lstg.SetBorderless(enable)
+end
+
+---Sets the targeted FPS count. Default is 60.
+---@param fps number
+function lstg.SetFPS(fps)
+end
+
+---Returns the current FPS.
+---@return number fps
+---@nodiscard
+function lstg.GetFPS()
+end
+
+---Tries to enable vsync mode for the window.
+---@param active boolean Whether to enable or disable vsync.
+function lstg.SetVsync(active)
+end
+
+---Sets the preferred GPU for the engine to use.
+---@param name string Name of the GPU.
+---@deprecated Usage is discouraged.
+function lstg.SetPreferenceGPU(name)
+end
+
+---Sets the game's window resolution.
+---@param width number The width of the window.
+---@param height number The height of the window.
+function lstg.SetResolution(width, height)
+end
+
+---@enum LogLevel
+local LogLevel = {
+    Trace = 0,
+    Debug = 1,
+    Info = 2,
+    Warn = 3,
+    Error = 4,
+    Critical = 5,
+    Off = 6,
+}
+
+---Logs a message with a specified level.
+---@param level LogLevel The log level.
+---@param message string The message to log.
+function lstg.Log(level, message)
+end
+
+---Executes a Lua file.
+---@param file string The path to the Lua file to execute.
+---@param packname string? The name of the archive context.
+function lstg.DoFile(file, packname)
+end
+
+---Loads a text file.
+---@param file string The path to the text file to load.
+---@param packname string? The name of the archive context.
+---@return string content The content of the text file.
+function lstg.LoadTextFile(file, packname)
+end
+
+---Loads a compressed text file.
+---@param file string The path to the compressed text file to load.
+---@param packname string? The name of the archive context.
+---@return string content The content of the compressed text file.
+function lstg.LoadCompressedTextFile(file, packname)
+end
+
+---Changes the video mode of the game window.
+---@param width number The width of the window.
+---@param height number The height of the window.
+---@param window_mode WindowMode The window mode
+---@param vsync boolean Whether to enable or disable vsync.
+function lstg.ChangeVideoMode(width, height, window_mode, vsync)
+end
+
+---Enumerates through hardcoded resolutions.
+---
+---Returns:
+---```lua
+---{
+---    { 640, 480, 60, 1 },
+---    { 800, 600, 60, 1 },
+---    { 960, 720, 60, 1 },
+---    { 1024, 768, 60, 1 },
+---    { 1280, 960, 60, 1 }
+---}
+---```
+---@return {width: integer, height: integer, refresh_rate_numerator: number, refresh_rate_denominator: number}[]
+function lstg.EnumResolutions()
+end
+
+---Returns a lot of available GPUs connected to the motherboard.
+---@return string[] List of available GPU human friendly names.
+function lstg.EnumGPUs()
+end
+
+---Changes the active GPU.
+---@param gpu_name string The name of the GPU to switch to.
+function lstg.ChangeGPU(gpu_name)
+end
+
+---Returns the name of the currently active GPU.
+---@return string @The name of the currently active GPU.
+function lstg.GetCurrentGpuName()
+end
+
+---@enum SwapChainScalingMode
+local SwapChainScalingMode = {
+    Stretch = 0,
+    AspectRatio = 1,
+}
+
+---Sets the scaling mode for the swap chain.
+---@param mode SwapChainScalingMode The scaling mode to set.
+function lstg.SetSwapChainScalingMode(mode)
+end
+
+---Returns the current tick count.
+---@return number The current tick count.
+function lstg.CurrentTick()
+end
+
+---Returns the time elapsed in milliseconds since the game started.
+---@return number The time elapsed in milliseconds.
+function lstg.TimeElapsedMs()
+end
+
+---Returns the current memory usage of the game.
+---@return { activeMemoryUsage:integer, privMemoryUsage:integer, systemMemoryLoad:integer?, ramUsagePercent:integer? } @The current memory usage data
+function lstg.GetMemoryUsage()
+end
+
+---Returns statistics about game objects.
+---@return { allocated:integer, freed:integer, active:integer, collisionChecks:integer, collisionCallbacks:integer } @The game object statistics.
+function lstg.GetGameObjectStats()
+end
+
+---Returns statistics about the GPU.
+---@return { localUsage:integer, localBudget:integer, nonLocalUsage:integer, nonLocalBudget:integer } @The GPU statistics.
+function lstg.GetGPUStats()
+end
 
 --#region Resource Pool
 
