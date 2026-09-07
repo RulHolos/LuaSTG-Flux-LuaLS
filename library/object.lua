@@ -31,6 +31,7 @@
 ---@field img string Name of the renderable resource on the object.
 ---@field ani integer Animation timer (read_only)
 ---@field world integer The world this object belongs to.
+---@field nopause boolean If true, the object will not be affected by the super pause.
 ---@field is_class boolean Always true.
 lstg.object = {}
 
