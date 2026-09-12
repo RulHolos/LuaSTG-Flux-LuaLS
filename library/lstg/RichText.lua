@@ -25,39 +25,39 @@ lstg.RichText = {}
 ---Creates a RichText object. `path` is relative to the game path. `size` is font size from units on screen.
 ---@param path string
 ---@param size number
----@return lstg.RichText self
+---@return self
 function lstg.RichText.create(path, size)
 end
 
 ---Creates a RichText object from a system font. `name` is the friendly name of the system font. `size` is font size from units on screen.
 ---@param name string
 ---@param size number
----@return lstg.RichText self
+---@return self
 function lstg.RichText.createFromSystem(name, size)
 end
 
 ---Creates a RichText object from a loaded font resource. `name` is the name of a TTF resource. `size` is font size from units on screen.
 ---@param name string
 ---@param size number
----@return lstg.RichText self
+---@return self
 function lstg.RichText.createFromPool(name, size)
 end
 
 ---Sets the text of the RichText object. Supports Rich Text tags. See documentation for supported tags.
----@return lstg.RichText self
+---@return self
 function lstg.RichText:setText(text)
 end
 
 ---Sets the fill color of the text. Will be overridden by inline color tags.
 ---@param color lstg.Color
----@return lstg.RichText self
+---@return self
 function lstg.RichText:setFillColor(color)
 end
 
 ---Sets the outline color and size.
 ---@param size number
 ---@param color lstg.Color
----@return lstg.RichText self
+---@return self
 function lstg.RichText:setOutline(size, color)
 end
 
@@ -66,61 +66,61 @@ end
 ---@param offsetY number
 ---@param color lstg.Color
 ---@param blur number?
----@return lstg.RichText self
+---@return self
 function lstg.RichText:setShadow(offsetX, offsetY, color, blur)
 end
 
 ---Removes the drop shadow.
+---@return self
 function lstg.RichText:clearShadow()
----@return lstg.RichText self
 end
 
 ---Changes the font size. Rebuilds the text format and layout.
 ---@param size number
----@return lstg.RichText self
+---@return self
 function lstg.RichText:setFontSize(size)
 end
 
 ---Sets the word wrap width in world units. Put `0` to remove the limit (auto-size mode).
 ---@param width number
----@return lstg.RichText self
+---@return self
 function lstg.RichText:setTextWrap(width)
 end
 
 ---Sets the max width of the text in world units. If the text doesn't fit, font size will shrink to fit. Put `0` to remove the limit.
 ---@param width number
----@return lstg.RichText self
+---@return self
 function lstg.RichText:setMaxWidth(width)
 end
 
 ---Sets the max height of the text in world units. If the text doesn't fit, font size will shrink to fit. Put `0` to remove the limit.
 ---@param height number
----@return lstg.RichText self
+---@return self
 function lstg.RichText:setMaxHeight(height)
 end
 
 ---Sets horizontal text alignment. Default is `"left"`.
 ---@param align "left"|"center"|"right"
----@return lstg.RichText self
+---@return self
 function lstg.RichText:setHAlign(align)
 end
 
 ---Sets vertical text alignment. Default is `"top"`.
 ---@param align "top"|"middle"|"bottom"
----@return lstg.RichText self
+---@return self
 function lstg.RichText:setVAlign(align)
 end
 
 ---Sets horizontal and vertical alignment at once. Either argument may be `nil` to leave that axis unchanged.
 ---@param h "left"|"center"|"right"|nil
 ---@param v "top"|"middle"|"bottom"|nil
----@return lstg.RichText self
+---@return self
 function lstg.RichText:setAlignment(h, v)
 end
 
 ---Sets how many world units correspond to one texture pixel. Disables auto-scale. You usually won't need to use this.
 ---@param v number
----@return lstg.RichText self
+---@return self
 function lstg.RichText:setUnitPerPixel(v)
 end
 
@@ -132,12 +132,12 @@ end
 
 ---When `true`, `unitPerPixel` is automatically computed each frame from the canvas/viewport ratio. Calling `setUnitPerPixel` disables this. Defaults to true.
 ---@param enable boolean?
----@return lstg.RichText self
+---@return self
 function lstg.RichText:setAutoScale(enable)
 end
 
 ---Updates the RichText object. Should be called each frame.
----@return lstg.RichText self
+---@return self
 function lstg.RichText:update()
 end
 
@@ -160,14 +160,14 @@ end
 ---@param scaleX number?
 ---@param scaleY number?
 ---@param rotation number?
----@return lstg.RichText self
+---@return self
 function lstg.RichText:render(x, y, scaleX, scaleY, rotation)
 end
 
 ---Sets the render state for the text. Will be applied to all characters on top of what's already here.
 ---@param blend BlendMode
 ---@param color lstg.Color
----@return lstg.RichText self
+---@return self
 function lstg.RichText:setState(blend, color)
 end
 
