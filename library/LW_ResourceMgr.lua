@@ -364,8 +364,11 @@ lstg.ResourceManager.GetImageScale = lstg.GetImageScale
 ---Sets the blend mode and color of an image.
 ---@param name string Image name.
 ---@param blend_mode BlendMode Blend mode.
----@param color lstg.Color|lstg.Color[]? One color or four vertex colors.
-function lstg.SetImageState(name, blend_mode, color)
+---@param color1 lstg.Color?
+---@param color2 lstg.Color?
+---@param color3 lstg.Color?
+---@param color4 lstg.Color?
+function lstg.SetImageState(name, blend_mode, color1, color2, color3, color4)
 end
 lstg.ResourceManager.SetImageState = lstg.SetImageState
 
@@ -394,8 +397,11 @@ lstg.ResourceManager.GetAnimationScale = lstg.GetAnimationScale
 ---Sets the blend mode and color of an animation.
 ---@param name string Animation name.
 ---@param blend_mode BlendMode Blend mode.
----@param color lstg.Color|lstg.Color[]? One color or four vertex colors.
-function lstg.SetAnimationState(name, blend_mode, color)
+---@param color1 lstg.Color?
+---@param color2 lstg.Color?
+---@param color3 lstg.Color?
+---@param color4 lstg.Color?
+function lstg.SetAnimationState(name, blend_mode, color1, color2, color3, color4)
 end
 lstg.ResourceManager.SetAnimationState = lstg.SetAnimationState
 
