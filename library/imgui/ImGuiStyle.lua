@@ -1,0 +1,137 @@
+---@meta
+
+---Represents an array of colors used in styles.
+---@class imgui.ImGuiStyle.Colors
+imgui.ImGuiStyle.Colors = {}
+
+---Represents the styling configuration of the current instance.
+---@class imgui.ImGuiStyle
+---@field FontSizeBase number Defaults to 0.0
+---@field FontScaleMain number Defaults to 1.0
+---@field FontScaleDpi number Defaults to 1.0
+---@field Alpha number Defaults to 1.0
+---@field DisabledAlpha number Defaults to 0.60
+---@field WindowPadding imgui.ImVec2 Defaults to (8, 8)
+---@field WindowRounding number Defaults to 0.0
+---@field WindowBorderSize number Defaults to 1.0
+---@field WindowBorderHoverPadding number Defaults to 4.0
+---@field WindowMinSize imgui.ImVec2 Defaults to (32, 32)
+---@field WindowTitleAlign imgui.ImVec2 Defaults to (0.5, 0.5)
+---@field WindowMenuButtonPosition imgui.ImGuiDir Defaults to imgui.ImGuiDir.Left
+---@field ChildRounding number Defaults to 0.0
+---@field ChildBorderSize number Defaults to 1.0
+---@field PopupRounding number Defaults to 0.0
+---@field PopupBorderSize number Defaults to 1.0
+---@field FramePadding imgui.ImVec2 Defaults to (4, 3)
+---@field FrameRounding number Defaults to 0.0
+---@field FrameBorderSize number Defaults to 0.0
+---@field ItemSpacing imgui.ImVec2 Defaults to (8, 4)
+---@field ItemInnerSpacing imgui.ImVec2 Defaults to (4, 4)
+---@field CellPadding imgui.ImVec2 Defaults to (4, 2)
+---@field TouchExtraPadding imgui.ImVec2 Defaults to (0, 0)
+---@field IndentSpacing number Defaults to 21.0
+---@field ColumnsMinSpacing number Defaults to 6.0
+---@field ScrollbarSize number Defaults to 14.0
+---@field ScrollbarRounding number Defaults to 9.0
+---@field GrabMinSize number Defaults to 12.0
+---@field GrabRounding number Defaults to 0.0
+---@field LogSliderDeadzone number Defaults to 4.0
+---@field ImageBorderSize number Defaults to 0.0
+---@field TabRounding number Defaults to 5.0
+---@field TabBorderSize number Defaults to 0.0
+---@field TabMinWidthBase number Defaults to 1.0
+---@field TabMinWidthShrink number Defaults to 80.0
+---@field TabCloseButtonMinWidthSelected number Defaults to -1.0
+---@field TabCloseButtonMinWidthUnselected number Defaults to 0.0
+---@field TabBarBorderSize number Defaults to 1.0
+---@field TabBarOverlineSize number Defaults to 1.0
+---@field TableAngledHeadersAngle number Defaults to 35 * (PI / 180)
+---@field TableAngledHeadersTextAlign imgui.ImVec2 Defaults to (0.5, 0)
+---@field TreeLinesFlags imgui.ImGuiTreeNodeFlags Defaults to imgui.ImGuiTreeNodeFlags.DrawLinesNone
+---@field TreeLinesSize number Defaults to 1.0
+---@field TreeLinesRounding number Defaults to 0.0
+---@field ColorButtonPosition imgui.ImGuiDir Defaults to imgui.ImGuiDir.Right
+---@field ButtonTextAlign imgui.ImVec2 Defaults to (0.5, 0.5)
+---@field SelectableTextAlign imgui.ImVec2 Defaults to (0.0, 0.0)
+---@field SeparatorTextBorderSize number Defaults to 3.0
+---@field SeparatorTextAlign imgui.ImVec2 Defaults to (0.0, 0.5)
+---@field SeparatorTextPadding imgui.ImVec2 Defaults to (20.0, 3.0)
+---@field DisplayWindowPadding imgui.ImVec2 Defaults to (19.0, 19.0)
+---@field DisplaySafeAreaPadding imgui.ImVec2 Defaults to (3.0, 3.0)
+---@field MouseCursorScale number Defaults to 1.0
+---@field AntiAliasedLines boolean Defaults to true
+---@field AntiAliasedLinesUseTex boolean Defaults to true
+---@field AntiAliasedFill boolean Defaults to true
+---@field CurveTessellationTol number Defaults to 1.25
+---@field CircleTessellationMaxError number Defaults to 0.30
+---
+---@field Colors imgui.ImGuiStyle.Colors
+---@field Text imgui.ImVec4
+---@field TextDisabled imgui.ImVec4
+---@field WindowBg imgui.ImVec4
+---@field ChildBg imgui.ImVec4
+---@field PopupBg imgui.ImVec4
+---@field Border imgui.ImVec4
+---@field BorderShadow imgui.ImVec4
+---@field FrameBg imgui.ImVec4
+---@field FrameBgHovered imgui.ImVec4
+---@field FrameBgActive imgui.ImVec4
+---@field TitleBg imgui.ImVec4
+---@field TitleBgActive imgui.ImVec4
+---@field TitleBgCollapsed imgui.ImVec4
+---@field MenuBarBg imgui.ImVec4
+---@field ScrollbarBg imgui.ImVec4
+---@field CheckMark imgui.ImVec4
+---@field SliderGrab imgui.ImVec4
+---@field SliderGrabActive imgui.ImVec4
+---@field Button imgui.ImVec4
+---@field ButtonHovered imgui.ImVec4
+---@field ButtonActive imgui.ImVec4
+---@field Header imgui.ImVec4
+---@field HeaderHovered imgui.ImVec4
+---@field HeaderActive imgui.ImVec4
+---@field Separator imgui.ImVec4
+---@field SeparatorHovered imgui.ImVec4
+---@field SeparatorActive imgui.ImVec4
+---@field ResizeGrip imgui.ImVec4
+---@field ResizeGripHovered imgui.ImVec4
+---@field ResizeGripActive imgui.ImVec4
+---@field Tab imgui.ImVec4
+---@field TabHovered imgui.ImVec4
+---@field TabActive imgui.ImVec4
+---@field TabUnfocused imgui.ImVec4
+---@field TabUnfocusedActive imgui.ImVec4
+---@field DockingPreview imgui.ImVec4
+---@field DockingEmptyBg imgui.ImVec4
+---@field PlotLines imgui.ImVec4
+---@field PlotLinesHovered imgui.ImVec4
+---@field PlotHistogram imgui.ImVec4
+---@field PlotHistogramHovered imgui.ImVec4
+---@field TableHeaderBg imgui.ImVec4
+---@field TableBorderStrong imgui.ImVec4
+---@field TableBorderLight imgui.ImVec4
+---@field TableRowBg imgui.ImVec4
+---@field TableRowBgAlt imgui.ImVec4
+---@field TextSelectedBg imgui.ImVec4
+---@field DragDropTarget imgui.ImVec4
+---@field NavHighlight imgui.ImVec4
+---@field NavWindowingHighlight imgui.ImVec4
+---@field NavWindowingDimBg imgui.ImVec4
+---@field ModalWindowDimBg imgui.ImVec4
+---
+---@field HoverStationaryDelay number Defaults to 0.15
+---@field HoverDelayShort number Defaults to 0.15
+---@field HoverDelayNormal number Defaults to 0.40
+---@field HoverFlagsForTooltipMouse imgui.ImGuiHoveredFlags Defaults to imgui.ImGuiHoveredFlags.Stationary | imgui.ImGuiHoveredFlags.DelayShort | imgui.ImGuiHoveredFlags.AllowWhenDisabled;
+---@field HoverFlagsForTooltipNav imgui.ImGuiHoveredFlags Defaults to imgui.ImGuiHoveredFlags.NoSharedDelay | imgui.ImGuiHoveredFlags.DelayNormal | imgui.ImGuiHoveredFlags.AllowWhenDisabled
+imgui.ImGuiStyle = {}
+
+---Creates a new instance of the ImGuiStyle class.
+---@return imgui.ImGuiStyle
+function imgui.ImGuiStyle()
+end
+
+---Scales all sizes in the style by the given factor.
+---@param scale_factor number
+function imgui.ImGuiStyle:ScaleAllSizes(scale_factor)
+end

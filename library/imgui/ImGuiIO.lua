@@ -1,0 +1,84 @@
+---@meta
+
+---TODO: Functions
+---@class imgui.ImGuiIO
+---@field ConfigFlags imgui.ImGuiConfigFlags
+---@field BackendFlags imgui.ImGuiBackendFlags
+---@field DisplaySize imgui.ImVec2
+---@field DisplayFramebufferScale imgui.ImVec2
+---@field DeltaTime number
+---@field IniSavingRate number
+---@field ConfigNavSwapGamepadButtons boolean
+---@field ConfigNavMoveSetMousePos boolean
+---@field ConfigNavCaptureKeyboard boolean
+---@field ConfigNavEscapeClearFocusItem boolean
+---@field ConfigNavEscapeClearFocusWindow boolean
+---@field ConfigNavCursorVisibleAuto boolean
+---@field ConfigNavCursorVisibleAlways boolean
+---@field MouseDrawCursor boolean
+---@field ConfigMacOSXBehaviors boolean
+---@field ConfigInputTrickleEventQueue boolean
+---@field ConfigInputTextCursorBlink boolean
+---@field ConfigInputTextEnterKeepActive boolean
+---@field ConfigDragClickToInputText boolean
+---@field ConfigWindowsResizeFromEdges boolean
+---@field ConfigWindowsMoveFromTitleBarOnly boolean
+---@field ConfigWindowsCopyContentsWithCtrlC boolean
+---@field ConfigScrollbarScrollByPage boolean
+---@field ConfigMemoryCompactTimer number
+---@field MouseDoubleClickTime number
+---@field MouseDoubleClickMaxDist number
+---@field MouseDragThreshold number
+---@field KeyRepeatDelay number
+---@field KeyRepeatRate number
+---@field ConfigErrorRecovery boolean
+---@field ConfigErrorRecoveryEnableAssert boolean
+---@field ConfigErrorRecoveryEnableDebugLog boolean
+---@field ConfigErrorRecoveryEnableTooltip boolean
+---@field ConfigDebugIsDebuggerPresent boolean
+---@field ConfigDebugHighlightIdConflicts boolean
+---@field ConfigDebugHighlightIdConflictsShowItemPicker boolean
+---@field ConfigDebugBeginReturnValueOnce boolean
+---@field ConfigDebugBeginReturnValueLoop boolean
+---@field ConfigDebugIgnoreFocusLoss boolean
+---@field ConfigDebugIniSettings boolean
+---@field WantCaptureMouse boolean
+---@field WantCaptureKeyboard boolean
+---@field WantTextInput boolean
+---@field WantSetMousePos boolean
+---@field WantSaveIniSettings boolean
+---@field NavActive boolean
+---@field NavVisible boolean
+---@field Framerate number
+---@field MetricsRenderVertices integer
+---@field MetricsRenderIndices integer
+---@field MetricsRenderWindows integer
+---@field MetricsActiveWindows integer
+---@field MouseDelta imgui.ImVec2
+---@field MousePos imgui.ImVec2
+---@field MouseWheel number
+---@field MouseWheelH number
+---@field MouseSource integer
+---@field KeyCtrl boolean
+---@field KeyShift boolean
+---@field KeyAlt boolean
+---@field KeySuper boolean
+---@field KeyMods integer
+---@field AddKeyEvent fun(self: imgui.ImGuiIO, key: integer, down: boolean)
+---@field AddKeyAnalogEvent fun(self: imgui.ImGuiIO, key: integer, down: boolean, value: number)
+---@field AddMousePosEvent fun(self: imgui.ImGuiIO, x: number, y: number)
+---@field AddMouseButtonEvent fun(self: imgui.ImGuiIO, button: integer, down: boolean)
+---@field AddMouseWheelEvent fun(self: imgui.ImGuiIO, x: number, y: number)
+---@field AddMouseSourceEvent fun(self: imgui.ImGuiIO, source: integer)
+---@field AddFocusEvent fun(self: imgui.ImGuiIO, focused: boolean)
+---@field AddInputCharacter fun(self: imgui.ImGuiIO, codepoint: integer)
+---@field AddInputCharacterUTF16 fun(self: imgui.ImGuiIO, codepoint: integer)
+---@field AddInputCharactersUTF8 fun(self: imgui.ImGuiIO, text: string)
+---@field SetKeyEventNativeData fun(self: imgui.ImGuiIO, key: integer, nativeKeycode: integer, nativeScancode: integer, legacyIndex?: integer)
+---@field SetAppAcceptingEvents fun(self: imgui.ImGuiIO, accepting: boolean)
+---@field ClearEventsQueue fun(self: imgui.ImGuiIO)
+---@field ClearInputKeys fun(self: imgui.ImGuiIO)
+---@field ClearInputMouse fun(self: imgui.ImGuiIO)
+imgui.ImGuiIO = {}
+
+return imgui.ImGuiIO
