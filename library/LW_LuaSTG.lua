@@ -32,6 +32,11 @@ end
 function lstg.GetVersionName()
 end
 
+---Returns the ISO 639-1 code of the system's language.
+---@return string? @ISO 639-1 code of the system's language. Can be `nil` if the language cannot be determined.
+function lstg.GetSystemLanguage()
+end
+
 ---Returns the name of the engine branch.
 ---@return string
 function lstg.GetVersionBranch()
