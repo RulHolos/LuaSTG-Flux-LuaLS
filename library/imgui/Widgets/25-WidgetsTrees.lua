@@ -35,9 +35,9 @@ end
 
 ---Creates a collapsing header with optional label formatting.
 ---@param label string
----@param flags imgui.ImGuiTreeNodeFlags
+---@param flags imgui.ImGuiTreeNodeFlags?
 ---@return boolean result
----@overload fun(label:string, p_visible:boolean, flags:imgui.ImGuiTreeNodeFlags):boolean, boolean
+---@overload fun(label:string, p_visible:boolean, flags:imgui.ImGuiTreeNodeFlags?):boolean, boolean
 function imgui.ImGui.CollapsingHeader(label, flags)
 end
 
